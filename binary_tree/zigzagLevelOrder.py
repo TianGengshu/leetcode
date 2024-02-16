@@ -1,13 +1,15 @@
 from collections import deque
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
+
 class Solution:
-    def zigzagLevelOrder(self, root: TreeNode) :
+    def zigzagLevelOrder(self, root: TreeNode):
         if not root:
             return []
 
@@ -17,9 +19,8 @@ class Solution:
 
         while queue:
             r = deque([])
-            print([i.val for i in queue])
-            for i in range(len(queue)):
-                
+            # print([i.val for i in queue])
+            for _ in range(len(queue)):
                 elem = queue[0]
                 queue = queue[1:]
 
@@ -27,9 +28,10 @@ class Solution:
                     r.append(elem.val)
                 else:
                     r.appendleft(elem.val)
-                
+
                 if elem.left:
                     queue.append(elem.left)
+
                 if elem.right:
                     queue.append(elem.right)
 
@@ -37,3 +39,7 @@ class Solution:
             result.append(list(r))
 
         return result
+
+
+if __name__ == '__main__':
+    s = Solution()
