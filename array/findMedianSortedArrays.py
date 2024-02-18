@@ -8,7 +8,7 @@ class Solution:
             if not nums2:
                 merged.extend(nums1)
                 break
-            
+
             if nums1[0] < nums2[0]:
                 merged.append(nums1[0])
                 nums1.pop(0)
@@ -42,4 +42,8 @@ if __name__ == "__main__":
 
     nums1 = []
     nums2 = []
+    
+    nums1 = [1, 3]
+    nums2 = [2]
+    
     print(Solution().findMedianSortedArrays(nums1, nums2))
