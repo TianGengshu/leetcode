@@ -25,9 +25,11 @@ class Solution:
     def psotorder_iterative(self, root: 'Node') -> List[int]:
         if not root:
             return []
+
         result = []
         stack = [root]
         traversed = set()
+
         while stack:
             node = stack[-1]
             if not node.children or node in traversed:
