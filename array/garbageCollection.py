@@ -20,7 +20,7 @@ class Solution:
                     time += sum(travel[:i])
                     visited.add('P')
 
-            # already at the first stop, still missing a type of garbage 
+            # already at the first stop, still missing a type of garbage
             if i == 0 and len(visited) < 3:
                 break
         time += len(''.join(garbage))
