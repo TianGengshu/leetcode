@@ -13,9 +13,9 @@ class Solution:
 
             for i in range(len(nums)):
                 # if nums in this index already seen, pass this iteration
-                if nums[i] in l:
+                if nums[idx] in l:
                     continue
-                l.append(nums[i])
+                l.append(nums[idx])
                 backtracking(l, i)
                 l.pop()
 
@@ -25,4 +25,5 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.permute([1,2]))
+    # print(s.permute([1,2]))
+    print(s.permute([1,2,3]))
